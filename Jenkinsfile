@@ -17,7 +17,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 sh 'docker rm -f simplepage-container || true'
-                sh 'docker run -d -p 8888:80 --name simplepage-container simplepage-app'
+                sh 'docker run -d -p 8000:80 --name simplepage-container simplepage-app'
             }
         }
     }
