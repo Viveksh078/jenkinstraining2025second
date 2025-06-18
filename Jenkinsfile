@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/Viveksh078/jenkinstraining2025first.git'
+                git 'https://github.com/Viveksh078/jenkinstraining2025second.git'
             }
         }
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t simplepage-app .'
+                sh 'docker build --no-cache -t simplepage-app .'
             }
         }
 
